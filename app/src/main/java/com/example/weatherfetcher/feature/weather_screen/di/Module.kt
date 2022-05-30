@@ -9,14 +9,10 @@ import org.koin.dsl.module
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
+
+//пакет di (DependenciesInjection) - используется библиотека Koin, описание зависимостей
+
 val weatherScreenModule = module {
-//    presenter = WeatherScreenPresenter(
-//        WeatherInteractor(
-//            WeatherRepoImpl(
-//                WeatherRemoteSource(WeatherApiClient.getApi())
-//            )
-//        )
-//    )
 
     single { OkHttpClient.Builder().build() } // собираем OkHttpClient - используется паттерн "Builder" (зачем? - кратко:
                                               // сама делает всяки штуки, по типу "закрыть соединение", "открыть соединение" и пр. )
@@ -28,6 +24,7 @@ val weatherScreenModule = module {
         .build() }
 
     single { get<Retrofit>().create(WeatherApi::class.java) } //собираем конечный запрос для получения JSON
+
 
     single<WeatherRemoteSource> { WeatherRemoteSource(get()) }
 
