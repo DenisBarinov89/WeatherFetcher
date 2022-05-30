@@ -2,9 +2,10 @@ package com.example.weatherfetcher.feature.weather_screen.data
 
 import com.example.weatherfetcher.API_KEY
 import com.example.weatherfetcher.feature.weather_screen.data.model.WeatherRemoteModel
-import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Query
+
+//интерфейс формирования гет запроса для API, retrofit работает с интерфейсами
 
 interface WeatherApi {
 

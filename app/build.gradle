@@ -52,13 +52,13 @@ dependencies {
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version"
     // LiveData
     implementation "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle_version"
-    // Retrofit
+    // Retrofit - библиотека для работы с интернетом
     implementation "com.squareup.retrofit2:retrofit:$retrofit_version"
     // Coroutines
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutines_version"
     //gson
     implementation "com.google.code.gson:gson:$gson_version"
-    //gson-converter
+    //gson-converter - библиотека для конвертации JSON-разметки
     implementation "com.squareup.retrofit2:converter-gson:$retrofit_version"
     //koin
     implementation "io.insert-koin:koin-android:$koin_version"
