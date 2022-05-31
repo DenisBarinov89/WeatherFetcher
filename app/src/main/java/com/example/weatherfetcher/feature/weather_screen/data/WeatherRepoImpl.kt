@@ -8,7 +8,7 @@ class WeatherRepoImpl(private val weatherRemoteSource: WeatherRemoteSource) : We
         return weatherRemoteSource.getWeather(selectedCity = selectedCity).temperatureToDomain()
     }
 
-    override suspend fun getWind(): WindModel {
-        return weatherRemoteSource.getWeather().windToDomain()
+    override suspend fun getWind(selectedCity: String): WindModel {
+        return weatherRemoteSource.getWeather(selectedCity = selectedCity).windToDomain()
     }
 }

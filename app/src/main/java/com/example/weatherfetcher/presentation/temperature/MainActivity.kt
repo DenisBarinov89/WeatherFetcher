@@ -23,9 +23,9 @@ class MainActivity : AppCompatActivity() {
     private val textViewHello: TextView by lazy { findViewById(R.id.tvHello) }
     private val progressBar: ProgressBar by lazy { findViewById(R.id.progressBar) }
     private val toWindScreen: Button by lazy {findViewById(R.id.btnGetWindActivity)}
-    private val spinnerSelectCity: Spinner by lazy { findViewById(R.id.spSelectCity) }
-    val arrayAdapter: ArrayAdapter<String> by lazy {ArrayAdapter(this, android.R.layout.simple_spinner_dropdown_item, CITIES_LIST)}
-    var selectedCity: String? = null
+    private val spinnerSelectCity: Spinner by lazy { findViewById(R.id.spSelectCityMA) }
+    private val arrayAdapter: ArrayAdapter<String> by lazy {ArrayAdapter(this, android.R.layout.simple_spinner_dropdown_item, CITIES_LIST)}
+    private var selectedCity: String? = null
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -39,9 +39,7 @@ class MainActivity : AppCompatActivity() {
             }
 
             override fun onNothingSelected(p0: AdapterView<*>?) {
-
             }
-
         }
 
         viewModel.viewState.observe(this, ::render)  //ViewModel обсервер, наблюдает за изменениями данных

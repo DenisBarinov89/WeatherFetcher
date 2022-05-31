@@ -11,7 +11,7 @@ data class ViewState(
 
 sealed class UiEvent() : Event {
     data class onButtonClicked(val selectedCity: String) : UiEvent()
-    object onButtonGetWindClicked : UiEvent()
+    data class onButtonGetWindClicked(val selectedCity: String) : UiEvent()
 }
 
 sealed class DataEvent : Event {

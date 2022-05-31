@@ -31,7 +31,7 @@ class WeatherScreenViewModel(val interactor: WeatherInteractor) : BaseViewModel<
             }
             is UiEvent.onButtonGetWindClicked -> {
                 viewModelScope.launch {
-                    interactor.getWind().fold(
+                    interactor.getWind(selectedCity = event.selectedCity).fold(
                         onError = {
                             processDataEvent(DataEvent.OnWeatherFetchFailure(error = it))
                         },

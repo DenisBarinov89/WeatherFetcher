@@ -6,6 +6,18 @@
     android:layout_height="match_parent"
     tools:context=".presentation.wind.WindActivity">
 
+    <Spinner
+        android:id="@+id/spSelectCityWA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnGetWind"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvHello"
+        app:layout_constraintVertical_bias="1.0" />
+
     <TextView
         android:id="@+id/tvWind"
         android:layout_width="wrap_content"

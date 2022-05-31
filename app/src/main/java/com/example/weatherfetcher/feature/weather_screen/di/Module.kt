@@ -25,7 +25,6 @@ val weatherScreenModule = module {
 
     single { get<Retrofit>().create(WeatherApi::class.java) } //собираем конечный запрос для получения JSON
 
-
     single<WeatherRemoteSource> { WeatherRemoteSource(get()) }
 
     single<WeatherRepo> { WeatherRepoImpl(get()) }

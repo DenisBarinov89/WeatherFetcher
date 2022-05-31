@@ -12,8 +12,8 @@ class WeatherInteractor(private val weatherRepo: WeatherRepo) {
         return attempt { weatherRepo.getTemperature(selectedCity = selectedCity) }
     }
 
-    suspend fun getWind() : Either<Throwable, WindModel> {
-        return attempt { weatherRepo.getWind() }
+    suspend fun getWind(selectedCity: String) : Either<Throwable, WindModel> {
+        return attempt { weatherRepo.getWind(selectedCity = selectedCity) }
     }
 
 }

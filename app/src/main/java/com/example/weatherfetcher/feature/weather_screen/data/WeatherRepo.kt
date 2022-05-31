@@ -7,5 +7,5 @@ interface WeatherRepo {
 
     suspend fun getTemperature(selectedCity: String) : WeatherModel
 
-    suspend fun getWind() : WindModel
+    suspend fun getWind(selectedCity: String) : WindModel
 }

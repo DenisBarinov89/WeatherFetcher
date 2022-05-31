@@ -15,6 +15,4 @@ interface WeatherApi {
         @Query("units") units: String = "metric",
         @Query("appid") apiKey: String = API_KEY
     ) : WeatherRemoteModel
-
-
 }
